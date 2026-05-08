@@ -5,10 +5,9 @@ const axios = require('axios');
 const app = express();
 app.use(bodyParser.json());
 
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbzYOHiIMY2b3BPETNO1nT_qWoDjG3fyVXNaV_Hg-6cjGr0TEDLCDTlQA8t1MLduI6Fm3Q/exec';
+const GAS_URL = process.env.GAS_URL;
 
-// ★ここに貼る
-const LINE_TOKEN = 'wqHQPeo7vuuUMZ1rA+XBw1+axxvlGQ8ocDi27IHE8z1hfEtEq29Sx8UhC4GiVKs3EX22EVRHltFXtZnzEIcWSUB6f0GJKlLRyGJ7Kr8ZZQR18YM+suBJOfI8sRurvDqz+cFGoliIC2tJaWG3WIP1zgdB04t89/1O/w1cDnyilFU=';
+const LINE_TOKEN = process.env.LINE_TOKEN;
 
 app.post('/', (req, res) => {
   res.sendStatus(200);
